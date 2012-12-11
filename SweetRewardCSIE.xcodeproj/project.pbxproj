@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52B917D41677A9860013DAED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B917D31677A9860013DAED /* UIKit.framework */; };
+		52B917D61677A9860013DAED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B917D51677A9860013DAED /* Foundation.framework */; };
+		52B917D81677A9860013DAED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B917D71677A9860013DAED /* CoreGraphics.framework */; };
+		52B917DE1677A9860013DAED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52B917DC1677A9860013DAED /* InfoPlist.strings */; };
+		52B917E01677A9860013DAED /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52B917DF1677A9860013DAED /* main.mm */; };
+		52B917E41677A9860013DAED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B917E31677A9860013DAED /* AppDelegate.m */; };
+		52B917E61677A9860013DAED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B917E51677A9860013DAED /* Default.png */; };
+		52B917E81677A9860013DAED /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B917E71677A9860013DAED /* Default@2x.png */; };
+		52B917EA1677A9860013DAED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B917E91677A9860013DAED /* Default-568h@2x.png */; };
+		52B917ED1677A9860013DAED /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B917EB1677A9860013DAED /* MainStoryboard_iPhone.storyboard */; };
+		52B917F01677A9860013DAED /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B917EE1677A9860013DAED /* MainStoryboard_iPad.storyboard */; };
+		52B917F31677A9860013DAED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B917F21677A9860013DAED /* ViewController.m */; };
+		52B917FB1677A9860013DAED /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B917FA1677A9860013DAED /* SenTestingKit.framework */; };
+		52B917FC1677A9860013DAED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B917D31677A9860013DAED /* UIKit.framework */; };
+		52B917FD1677A9860013DAED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B917D51677A9860013DAED /* Foundation.framework */; };
+		52B918051677A9860013DAED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52B918031677A9860013DAED /* InfoPlist.strings */; };
+		52B918081677A9860013DAED /* SweetRewardCSIETests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B918071677A9860013DAED /* SweetRewardCSIETests.m */; };
+		52B9183F1677AD000013DAED /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B9183E1677AD000013DAED /* AVFoundation.framework */; };
+		52B918411677AD0A0013DAED /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B918401677AD0A0013DAED /* AudioToolbox.framework */; };
+		52B918431677AD150013DAED /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B918421677AD150013DAED /* CoreVideo.framework */; };
+		52B918451677AD1D0013DAED /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B918441677AD1D0013DAED /* CoreMedia.framework */; };
+		52B918471677AD2B0013DAED /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B918461677AD2B0013DAED /* libiconv.dylib */; };
+		52B918491677AD330013DAED /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B918481677AD330013DAED /* AddressBook.framework */; };
+		52B9184B1677AD3A0013DAED /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B9184A1677AD3A0013DAED /* AddressBookUI.framework */; };
+		52B9184E1677AE230013DAED /* QRCodeScannerViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52B9184D1677AE230013DAED /* QRCodeScannerViewController.mm */; };
+		52B918811677B94F0013DAED /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B918711677B0FF0013DAED /* libZXingWidget.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52B917FE1677A9860013DAED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52B917C61677A9860013DAED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B917CE1677A9860013DAED;
+			remoteInfo = SweetRewardCSIE;
+		};
+		52B918701677B0FF0013DAED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52B918681677B0FF0013DAED /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = ZXingWidget;
+		};
+		52B918721677B0FF0013DAED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52B918681677B0FF0013DAED /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D60398D13DF7CAD006F4B51;
+			remoteInfo = ZXingTests;
+		};
+		52B918751677B1090013DAED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52B918681677B0FF0013DAED /* ZXingWidget.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = ZXingWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52B917CF1677A9860013DAED /* SweetRewardCSIE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweetRewardCSIE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B917D31677A9860013DAED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		52B917D51677A9860013DAED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		52B917D71677A9860013DAED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		52B917DB1677A9860013DAED /* SweetRewardCSIE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SweetRewardCSIE-Info.plist"; sourceTree = "<group>"; };
+		52B917DD1677A9860013DAED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		52B917DF1677A9860013DAED /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		52B917E11677A9860013DAED /* SweetRewardCSIE-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SweetRewardCSIE-Prefix.pch"; sourceTree = "<group>"; };
+		52B917E21677A9860013DAED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		52B917E31677A9860013DAED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		52B917E51677A9860013DAED /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		52B917E71677A9860013DAED /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		52B917E91677A9860013DAED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		52B917EC1677A9860013DAED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		52B917EF1677A9860013DAED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		52B917F11677A9860013DAED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		52B917F21677A9860013DAED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		52B917F91677A9860013DAED /* SweetRewardCSIETests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweetRewardCSIETests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B917FA1677A9860013DAED /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		52B918021677A9860013DAED /* SweetRewardCSIETests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SweetRewardCSIETests-Info.plist"; sourceTree = "<group>"; };
+		52B918041677A9860013DAED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		52B918061677A9860013DAED /* SweetRewardCSIETests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SweetRewardCSIETests.h; sourceTree = "<group>"; };
+		52B918071677A9860013DAED /* SweetRewardCSIETests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SweetRewardCSIETests.m; sourceTree = "<group>"; };
+		52B9183E1677AD000013DAED /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		52B918401677AD0A0013DAED /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		52B918421677AD150013DAED /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		52B918441677AD1D0013DAED /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		52B918461677AD2B0013DAED /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		52B918481677AD330013DAED /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		52B9184A1677AD3A0013DAED /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		52B9184C1677AE230013DAED /* QRCodeScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScannerViewController.h; sourceTree = "<group>"; };
+		52B9184D1677AE230013DAED /* QRCodeScannerViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QRCodeScannerViewController.mm; sourceTree = "<group>"; };
+		52B918681677B0FF0013DAED /* ZXingWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZXingWidget.xcodeproj; path = "../zxing-master/iphone/ZXingWidget/ZXingWidget.xcodeproj"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52B917CC1677A9860013DAED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B918811677B94F0013DAED /* libZXingWidget.a in Frameworks */,
+				52B9184B1677AD3A0013DAED /* AddressBookUI.framework in Frameworks */,
+				52B918491677AD330013DAED /* AddressBook.framework in Frameworks */,
+				52B918471677AD2B0013DAED /* libiconv.dylib in Frameworks */,
+				52B918451677AD1D0013DAED /* CoreMedia.framework in Frameworks */,
+				52B918431677AD150013DAED /* CoreVideo.framework in Frameworks */,
+				52B918411677AD0A0013DAED /* AudioToolbox.framework in Frameworks */,
+				52B9183F1677AD000013DAED /* AVFoundation.framework in Frameworks */,
+				52B917D41677A9860013DAED /* UIKit.framework in Frameworks */,
+				52B917D61677A9860013DAED /* Foundation.framework in Frameworks */,
+				52B917D81677A9860013DAED /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B917F51677A9860013DAED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B917FB1677A9860013DAED /* SenTestingKit.framework in Frameworks */,
+				52B917FC1677A9860013DAED /* UIKit.framework in Frameworks */,
+				52B917FD1677A9860013DAED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52B917C41677A9860013DAED = {
+			isa = PBXGroup;
+			children = (
+				52B918681677B0FF0013DAED /* ZXingWidget.xcodeproj */,
+				52B9184A1677AD3A0013DAED /* AddressBookUI.framework */,
+				52B918481677AD330013DAED /* AddressBook.framework */,
+				52B918461677AD2B0013DAED /* libiconv.dylib */,
+				52B918441677AD1D0013DAED /* CoreMedia.framework */,
+				52B918421677AD150013DAED /* CoreVideo.framework */,
+				52B918401677AD0A0013DAED /* AudioToolbox.framework */,
+				52B9183E1677AD000013DAED /* AVFoundation.framework */,
+				52B917D91677A9860013DAED /* SweetRewardCSIE */,
+				52B918001677A9860013DAED /* SweetRewardCSIETests */,
+				52B917D21677A9860013DAED /* Frameworks */,
+				52B917D01677A9860013DAED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52B917D01677A9860013DAED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52B917CF1677A9860013DAED /* SweetRewardCSIE.app */,
+				52B917F91677A9860013DAED /* SweetRewardCSIETests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52B917D21677A9860013DAED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52B917D31677A9860013DAED /* UIKit.framework */,
+				52B917D51677A9860013DAED /* Foundation.framework */,
+				52B917D71677A9860013DAED /* CoreGraphics.framework */,
+				52B917FA1677A9860013DAED /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52B917D91677A9860013DAED /* SweetRewardCSIE */ = {
+			isa = PBXGroup;
+			children = (
+				52B917E21677A9860013DAED /* AppDelegate.h */,
+				52B917E31677A9860013DAED /* AppDelegate.m */,
+				52B917EB1677A9860013DAED /* MainStoryboard_iPhone.storyboard */,
+				52B917EE1677A9860013DAED /* MainStoryboard_iPad.storyboard */,
+				52B917F11677A9860013DAED /* ViewController.h */,
+				52B917F21677A9860013DAED /* ViewController.m */,
+				52B917DA1677A9860013DAED /* Supporting Files */,
+				52B9184C1677AE230013DAED /* QRCodeScannerViewController.h */,
+				52B9184D1677AE230013DAED /* QRCodeScannerViewController.mm */,
+			);
+			path = SweetRewardCSIE;
+			sourceTree = "<group>";
+		};
+		52B917DA1677A9860013DAED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52B917DB1677A9860013DAED /* SweetRewardCSIE-Info.plist */,
+				52B917DC1677A9860013DAED /* InfoPlist.strings */,
+				52B917DF1677A9860013DAED /* main.mm */,
+				52B917E11677A9860013DAED /* SweetRewardCSIE-Prefix.pch */,
+				52B917E51677A9860013DAED /* Default.png */,
+				52B917E71677A9860013DAED /* Default@2x.png */,
+				52B917E91677A9860013DAED /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52B918001677A9860013DAED /* SweetRewardCSIETests */ = {
+			isa = PBXGroup;
+			children = (
+				52B918061677A9860013DAED /* SweetRewardCSIETests.h */,
+				52B918071677A9860013DAED /* SweetRewardCSIETests.m */,
+				52B918011677A9860013DAED /* Supporting Files */,
+			);
+			path = SweetRewardCSIETests;
+			sourceTree = "<group>";
+		};
+		52B918011677A9860013DAED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52B918021677A9860013DAED /* SweetRewardCSIETests-Info.plist */,
+				52B918031677A9860013DAED /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52B918691677B0FF0013DAED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52B918711677B0FF0013DAED /* libZXingWidget.a */,
+				52B918731677B0FF0013DAED /* ZXingTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52B917CE1677A9860013DAED /* SweetRewardCSIE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B9180B1677A9860013DAED /* Build configuration list for PBXNativeTarget "SweetRewardCSIE" */;
+			buildPhases = (
+				52B917CB1677A9860013DAED /* Sources */,
+				52B917CC1677A9860013DAED /* Frameworks */,
+				52B917CD1677A9860013DAED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52B918761677B1090013DAED /* PBXTargetDependency */,
+			);
+			name = SweetRewardCSIE;
+			productName = SweetRewardCSIE;
+			productReference = 52B917CF1677A9860013DAED /* SweetRewardCSIE.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52B917F81677A9860013DAED /* SweetRewardCSIETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B9180E1677A9860013DAED /* Build configuration list for PBXNativeTarget "SweetRewardCSIETests" */;
+			buildPhases = (
+				52B917F41677A9860013DAED /* Sources */,
+				52B917F51677A9860013DAED /* Frameworks */,
+				52B917F61677A9860013DAED /* Resources */,
+				52B917F71677A9860013DAED /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52B917FF1677A9860013DAED /* PBXTargetDependency */,
+			);
+			name = SweetRewardCSIETests;
+			productName = SweetRewardCSIETests;
+			productReference = 52B917F91677A9860013DAED /* SweetRewardCSIETests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52B917C61677A9860013DAED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = agents;
+			};
+			buildConfigurationList = 52B917C91677A9860013DAED /* Build configuration list for PBXProject "SweetRewardCSIE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 52B917C41677A9860013DAED;
+			productRefGroup = 52B917D01677A9860013DAED /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 52B918691677B0FF0013DAED /* Products */;
+					ProjectRef = 52B918681677B0FF0013DAED /* ZXingWidget.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				52B917CE1677A9860013DAED /* SweetRewardCSIE */,
+				52B917F81677A9860013DAED /* SweetRewardCSIETests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		52B918711677B0FF0013DAED /* libZXingWidget.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libZXingWidget.a;
+			remoteRef = 52B918701677B0FF0013DAED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52B918731677B0FF0013DAED /* ZXingTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ZXingTests.octest;
+			remoteRef = 52B918721677B0FF0013DAED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52B917CD1677A9860013DAED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B917DE1677A9860013DAED /* InfoPlist.strings in Resources */,
+				52B917E61677A9860013DAED /* Default.png in Resources */,
+				52B917E81677A9860013DAED /* Default@2x.png in Resources */,
+				52B917EA1677A9860013DAED /* Default-568h@2x.png in Resources */,
+				52B917ED1677A9860013DAED /* MainStoryboard_iPhone.storyboard in Resources */,
+				52B917F01677A9860013DAED /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B917F61677A9860013DAED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B918051677A9860013DAED /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52B917F71677A9860013DAED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52B917CB1677A9860013DAED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B917E01677A9860013DAED /* main.mm in Sources */,
+				52B917E41677A9860013DAED /* AppDelegate.m in Sources */,
+				52B917F31677A9860013DAED /* ViewController.m in Sources */,
+				52B9184E1677AE230013DAED /* QRCodeScannerViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B917F41677A9860013DAED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B918081677A9860013DAED /* SweetRewardCSIETests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52B917FF1677A9860013DAED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52B917CE1677A9860013DAED /* SweetRewardCSIE */;
+			targetProxy = 52B917FE1677A9860013DAED /* PBXContainerItemProxy */;
+		};
+		52B918761677B1090013DAED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZXingWidget;
+			targetProxy = 52B918751677B1090013DAED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		52B917DC1677A9860013DAED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52B917DD1677A9860013DAED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		52B917EB1677A9860013DAED /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52B917EC1677A9860013DAED /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		52B917EE1677A9860013DAED /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52B917EF1677A9860013DAED /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		52B918031677A9860013DAED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52B918041677A9860013DAED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52B918091677A9860013DAED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52B9180A1677A9860013DAED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52B9180C1677A9860013DAED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SweetRewardCSIE/SweetRewardCSIE-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"../zxing-master/cpp/core/src/",
+					"../zxing-master/iphone/ZXingWidget/Classes",
+				);
+				INFOPLIST_FILE = "SweetRewardCSIE/SweetRewardCSIE-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		52B9180D1677A9860013DAED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SweetRewardCSIE/SweetRewardCSIE-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"../zxing-master/cpp/core/src/",
+					"../zxing-master/iphone/ZXingWidget/Classes",
+				);
+				INFOPLIST_FILE = "SweetRewardCSIE/SweetRewardCSIE-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		52B9180F1677A9860013DAED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SweetRewardCSIE.app/SweetRewardCSIE";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SweetRewardCSIE/SweetRewardCSIE-Prefix.pch";
+				INFOPLIST_FILE = "SweetRewardCSIETests/SweetRewardCSIETests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		52B918101677A9860013DAED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SweetRewardCSIE.app/SweetRewardCSIE";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SweetRewardCSIE/SweetRewardCSIE-Prefix.pch";
+				INFOPLIST_FILE = "SweetRewardCSIETests/SweetRewardCSIETests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52B917C91677A9860013DAED /* Build configuration list for PBXProject "SweetRewardCSIE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B918091677A9860013DAED /* Debug */,
+				52B9180A1677A9860013DAED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52B9180B1677A9860013DAED /* Build configuration list for PBXNativeTarget "SweetRewardCSIE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B9180C1677A9860013DAED /* Debug */,
+				52B9180D1677A9860013DAED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52B9180E1677A9860013DAED /* Build configuration list for PBXNativeTarget "SweetRewardCSIETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B9180F1677A9860013DAED /* Debug */,
+				52B918101677A9860013DAED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52B917C61677A9860013DAED /* Project object */;
+}
