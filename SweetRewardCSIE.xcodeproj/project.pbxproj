@@ -32,7 +32,7 @@
 		52B918491677AD330013DAED /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B918481677AD330013DAED /* AddressBook.framework */; };
 		52B9184B1677AD3A0013DAED /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B9184A1677AD3A0013DAED /* AddressBookUI.framework */; };
 		52B9184E1677AE230013DAED /* QRCodeScannerViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52B9184D1677AE230013DAED /* QRCodeScannerViewController.mm */; };
-		52B918811677B94F0013DAED /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B918711677B0FF0013DAED /* libZXingWidget.a */; };
+		52B918A816787F2D0013DAED /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B918A516787F200013DAED /* libZXingWidget.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,23 +43,23 @@
 			remoteGlobalIDString = 52B917CE1677A9860013DAED;
 			remoteInfo = SweetRewardCSIE;
 		};
-		52B918701677B0FF0013DAED /* PBXContainerItemProxy */ = {
+		52B918A416787F200013DAED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52B918681677B0FF0013DAED /* ZXingWidget.xcodeproj */;
+			containerPortal = 52B9189C16787F200013DAED /* ZXingWidget.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = ZXingWidget;
 		};
-		52B918721677B0FF0013DAED /* PBXContainerItemProxy */ = {
+		52B918A616787F200013DAED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52B918681677B0FF0013DAED /* ZXingWidget.xcodeproj */;
+			containerPortal = 52B9189C16787F200013DAED /* ZXingWidget.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1D60398D13DF7CAD006F4B51;
 			remoteInfo = ZXingTests;
 		};
-		52B918751677B1090013DAED /* PBXContainerItemProxy */ = {
+		52B918A916787F310013DAED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52B918681677B0FF0013DAED /* ZXingWidget.xcodeproj */;
+			containerPortal = 52B9189C16787F200013DAED /* ZXingWidget.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = ZXingWidget;
@@ -99,7 +99,7 @@
 		52B9184A1677AD3A0013DAED /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		52B9184C1677AE230013DAED /* QRCodeScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScannerViewController.h; sourceTree = "<group>"; };
 		52B9184D1677AE230013DAED /* QRCodeScannerViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QRCodeScannerViewController.mm; sourceTree = "<group>"; };
-		52B918681677B0FF0013DAED /* ZXingWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZXingWidget.xcodeproj; path = "../zxing-master/iphone/ZXingWidget/ZXingWidget.xcodeproj"; sourceTree = "<group>"; };
+		52B9189C16787F200013DAED /* ZXingWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZXingWidget.xcodeproj; path = zxing/iphone/ZXingWidget/ZXingWidget.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52B918811677B94F0013DAED /* libZXingWidget.a in Frameworks */,
+				52B918A816787F2D0013DAED /* libZXingWidget.a in Frameworks */,
 				52B9184B1677AD3A0013DAED /* AddressBookUI.framework in Frameworks */,
 				52B918491677AD330013DAED /* AddressBook.framework in Frameworks */,
 				52B918471677AD2B0013DAED /* libiconv.dylib in Frameworks */,
@@ -137,7 +137,7 @@
 		52B917C41677A9860013DAED = {
 			isa = PBXGroup;
 			children = (
-				52B918681677B0FF0013DAED /* ZXingWidget.xcodeproj */,
+				52B9189C16787F200013DAED /* ZXingWidget.xcodeproj */,
 				52B9184A1677AD3A0013DAED /* AddressBookUI.framework */,
 				52B918481677AD330013DAED /* AddressBook.framework */,
 				52B918461677AD2B0013DAED /* libiconv.dylib */,
@@ -221,11 +221,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		52B918691677B0FF0013DAED /* Products */ = {
+		52B9189D16787F200013DAED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52B918711677B0FF0013DAED /* libZXingWidget.a */,
-				52B918731677B0FF0013DAED /* ZXingTests.octest */,
+				52B918A516787F200013DAED /* libZXingWidget.a */,
+				52B918A716787F200013DAED /* ZXingTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				52B918761677B1090013DAED /* PBXTargetDependency */,
+				52B918AA16787F310013DAED /* PBXTargetDependency */,
 			);
 			name = SweetRewardCSIE;
 			productName = SweetRewardCSIE;
@@ -291,8 +291,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 52B918691677B0FF0013DAED /* Products */;
-					ProjectRef = 52B918681677B0FF0013DAED /* ZXingWidget.xcodeproj */;
+					ProductGroup = 52B9189D16787F200013DAED /* Products */;
+					ProjectRef = 52B9189C16787F200013DAED /* ZXingWidget.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -304,18 +304,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		52B918711677B0FF0013DAED /* libZXingWidget.a */ = {
+		52B918A516787F200013DAED /* libZXingWidget.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libZXingWidget.a;
-			remoteRef = 52B918701677B0FF0013DAED /* PBXContainerItemProxy */;
+			remoteRef = 52B918A416787F200013DAED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52B918731677B0FF0013DAED /* ZXingTests.octest */ = {
+		52B918A716787F200013DAED /* ZXingTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ZXingTests.octest;
-			remoteRef = 52B918721677B0FF0013DAED /* PBXContainerItemProxy */;
+			remoteRef = 52B918A616787F200013DAED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -388,10 +388,10 @@
 			target = 52B917CE1677A9860013DAED /* SweetRewardCSIE */;
 			targetProxy = 52B917FE1677A9860013DAED /* PBXContainerItemProxy */;
 		};
-		52B918761677B1090013DAED /* PBXTargetDependency */ = {
+		52B918AA16787F310013DAED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ZXingWidget;
-			targetProxy = 52B918751677B1090013DAED /* PBXContainerItemProxy */;
+			targetProxy = 52B918A916787F310013DAED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -489,8 +489,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SweetRewardCSIE/SweetRewardCSIE-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"../zxing-master/cpp/core/src/",
-					"../zxing-master/iphone/ZXingWidget/Classes",
+					zxing/cpp/core/src/,
+					zxing/iphone/ZXingWidget/Classes,
 				);
 				INFOPLIST_FILE = "SweetRewardCSIE/SweetRewardCSIE-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,8 +505,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SweetRewardCSIE/SweetRewardCSIE-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"../zxing-master/cpp/core/src/",
-					"../zxing-master/iphone/ZXingWidget/Classes",
+					zxing/cpp/core/src/,
+					zxing/iphone/ZXingWidget/Classes,
 				);
 				INFOPLIST_FILE = "SweetRewardCSIE/SweetRewardCSIE-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -568,6 +568,7 @@
 				52B9180D1677A9860013DAED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52B9180E1677A9860013DAED /* Build configuration list for PBXNativeTarget "SweetRewardCSIETests" */ = {
 			isa = XCConfigurationList;
@@ -576,6 +577,7 @@
 				52B918101677A9860013DAED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
