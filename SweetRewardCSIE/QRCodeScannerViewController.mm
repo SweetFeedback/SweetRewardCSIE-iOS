@@ -7,8 +7,8 @@
 //
 
 #import "QRCodeScannerViewController.h"
-
 #import "QRCodeReader.h"
+#import "SRDataSource.h"
 
 @interface QRCodeScannerViewController ()
 
@@ -29,6 +29,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    NSString *urlString = @"";
+    NSURL *url = [NSURL URLWithString:urlString];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,10 +47,26 @@
     //self->resultsToDisplay = result;
     if (self.isViewLoaded) {
         self.resultText.text = result;
-        //[resultsView setText:resultsToDisplay];
-        //[resultsView setNeedsDisplay];
-        NSURL *url = [NSURL URLWithString:result];
-        [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+        
+        NSInteger windowID = 1;
+        BOOL result = [[SRDataSource sharedSRDataSource] submitWindowByWindowID:windowID];
+        
+        if(result) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:@"Submit successfully"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles: nil];
+            [alert show];
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:@"Submit failed"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles: nil];
+            [alert show];
+        }
+        
     }
     [self dismissModalViewControllerAnimated:NO];
 }

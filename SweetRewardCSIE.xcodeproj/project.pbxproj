@@ -18,7 +18,6 @@
 		52B917EA1677A9860013DAED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B917E91677A9860013DAED /* Default-568h@2x.png */; };
 		52B917ED1677A9860013DAED /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B917EB1677A9860013DAED /* MainStoryboard_iPhone.storyboard */; };
 		52B917F01677A9860013DAED /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B917EE1677A9860013DAED /* MainStoryboard_iPad.storyboard */; };
-		52B917F31677A9860013DAED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B917F21677A9860013DAED /* ViewController.m */; };
 		52B917FB1677A9860013DAED /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B917FA1677A9860013DAED /* SenTestingKit.framework */; };
 		52B917FC1677A9860013DAED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B917D31677A9860013DAED /* UIKit.framework */; };
 		52B917FD1677A9860013DAED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B917D51677A9860013DAED /* Foundation.framework */; };
@@ -33,6 +32,18 @@
 		52B9184B1677AD3A0013DAED /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B9184A1677AD3A0013DAED /* AddressBookUI.framework */; };
 		52B9184E1677AE230013DAED /* QRCodeScannerViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52B9184D1677AE230013DAED /* QRCodeScannerViewController.mm */; };
 		52B918A816787F2D0013DAED /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B918A516787F200013DAED /* libZXingWidget.a */; };
+		52B919291679A90A0013DAED /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B919171679A90A0013DAED /* AFHTTPClient.m */; };
+		52B9192A1679A90A0013DAED /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B919191679A90A0013DAED /* AFHTTPRequestOperation.m */; };
+		52B9192B1679A90A0013DAED /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B9191B1679A90A0013DAED /* AFImageRequestOperation.m */; };
+		52B9192C1679A90A0013DAED /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B9191D1679A90A0013DAED /* AFJSONRequestOperation.m */; };
+		52B9192D1679A90A0013DAED /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B9191F1679A90A0013DAED /* AFNetworkActivityIndicatorManager.m */; };
+		52B9192E1679A90A0013DAED /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B919221679A90A0013DAED /* AFPropertyListRequestOperation.m */; };
+		52B9192F1679A90A0013DAED /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B919241679A90A0013DAED /* AFURLConnectionOperation.m */; };
+		52B919301679A90A0013DAED /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B919261679A90A0013DAED /* AFXMLRequestOperation.m */; };
+		52B919311679A90A0013DAED /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B919281679A90A0013DAED /* UIImageView+AFNetworking.m */; };
+		52B9193B1679AE590013DAED /* SRDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B9193A1679AE590013DAED /* SRDataSource.m */; };
+		52B919461679C5760013DAED /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B919451679C5760013DAED /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52B919501679CEC50013DAED /* SRSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B9194F1679CEC50013DAED /* SRSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,8 +93,6 @@
 		52B917E91677A9860013DAED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		52B917EC1677A9860013DAED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		52B917EF1677A9860013DAED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		52B917F11677A9860013DAED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		52B917F21677A9860013DAED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		52B917F91677A9860013DAED /* SweetRewardCSIETests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweetRewardCSIETests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B917FA1677A9860013DAED /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		52B918021677A9860013DAED /* SweetRewardCSIETests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SweetRewardCSIETests-Info.plist"; sourceTree = "<group>"; };
@@ -100,6 +109,31 @@
 		52B9184C1677AE230013DAED /* QRCodeScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScannerViewController.h; sourceTree = "<group>"; };
 		52B9184D1677AE230013DAED /* QRCodeScannerViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QRCodeScannerViewController.mm; sourceTree = "<group>"; };
 		52B9189C16787F200013DAED /* ZXingWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZXingWidget.xcodeproj; path = zxing/iphone/ZXingWidget/ZXingWidget.xcodeproj; sourceTree = "<group>"; };
+		52B919161679A90A0013DAED /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		52B919171679A90A0013DAED /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		52B919181679A90A0013DAED /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		52B919191679A90A0013DAED /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		52B9191A1679A90A0013DAED /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		52B9191B1679A90A0013DAED /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		52B9191C1679A90A0013DAED /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		52B9191D1679A90A0013DAED /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		52B9191E1679A90A0013DAED /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		52B9191F1679A90A0013DAED /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		52B919201679A90A0013DAED /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		52B919211679A90A0013DAED /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		52B919221679A90A0013DAED /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		52B919231679A90A0013DAED /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		52B919241679A90A0013DAED /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		52B919251679A90A0013DAED /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		52B919261679A90A0013DAED /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		52B919271679A90A0013DAED /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		52B919281679A90A0013DAED /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		52B919391679AE590013DAED /* SRDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDataSource.h; sourceTree = "<group>"; };
+		52B9193A1679AE590013DAED /* SRDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDataSource.m; sourceTree = "<group>"; };
+		52B919441679C5760013DAED /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		52B919451679C5760013DAED /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		52B9194E1679CEC50013DAED /* SRSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSettingViewController.h; sourceTree = "<group>"; };
+		52B9194F1679CEC50013DAED /* SRSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +171,8 @@
 		52B917C41677A9860013DAED = {
 			isa = PBXGroup;
 			children = (
+				52B919431679C5760013DAED /* JSONKit */,
+				52B919151679A90A0013DAED /* AFNetworking */,
 				52B9189C16787F200013DAED /* ZXingWidget.xcodeproj */,
 				52B9184A1677AD3A0013DAED /* AddressBookUI.framework */,
 				52B918481677AD330013DAED /* AddressBook.framework */,
@@ -179,11 +215,13 @@
 				52B917E31677A9860013DAED /* AppDelegate.m */,
 				52B917EB1677A9860013DAED /* MainStoryboard_iPhone.storyboard */,
 				52B917EE1677A9860013DAED /* MainStoryboard_iPad.storyboard */,
-				52B917F11677A9860013DAED /* ViewController.h */,
-				52B917F21677A9860013DAED /* ViewController.m */,
 				52B917DA1677A9860013DAED /* Supporting Files */,
 				52B9184C1677AE230013DAED /* QRCodeScannerViewController.h */,
 				52B9184D1677AE230013DAED /* QRCodeScannerViewController.mm */,
+				52B919391679AE590013DAED /* SRDataSource.h */,
+				52B9193A1679AE590013DAED /* SRDataSource.m */,
+				52B9194E1679CEC50013DAED /* SRSettingViewController.h */,
+				52B9194F1679CEC50013DAED /* SRSettingViewController.m */,
 			);
 			path = SweetRewardCSIE;
 			sourceTree = "<group>";
@@ -228,6 +266,41 @@
 				52B918A716787F200013DAED /* ZXingTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		52B919151679A90A0013DAED /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				52B919161679A90A0013DAED /* AFHTTPClient.h */,
+				52B919171679A90A0013DAED /* AFHTTPClient.m */,
+				52B919181679A90A0013DAED /* AFHTTPRequestOperation.h */,
+				52B919191679A90A0013DAED /* AFHTTPRequestOperation.m */,
+				52B9191A1679A90A0013DAED /* AFImageRequestOperation.h */,
+				52B9191B1679A90A0013DAED /* AFImageRequestOperation.m */,
+				52B9191C1679A90A0013DAED /* AFJSONRequestOperation.h */,
+				52B9191D1679A90A0013DAED /* AFJSONRequestOperation.m */,
+				52B9191E1679A90A0013DAED /* AFNetworkActivityIndicatorManager.h */,
+				52B9191F1679A90A0013DAED /* AFNetworkActivityIndicatorManager.m */,
+				52B919201679A90A0013DAED /* AFNetworking.h */,
+				52B919211679A90A0013DAED /* AFPropertyListRequestOperation.h */,
+				52B919221679A90A0013DAED /* AFPropertyListRequestOperation.m */,
+				52B919231679A90A0013DAED /* AFURLConnectionOperation.h */,
+				52B919241679A90A0013DAED /* AFURLConnectionOperation.m */,
+				52B919251679A90A0013DAED /* AFXMLRequestOperation.h */,
+				52B919261679A90A0013DAED /* AFXMLRequestOperation.m */,
+				52B919271679A90A0013DAED /* UIImageView+AFNetworking.h */,
+				52B919281679A90A0013DAED /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		52B919431679C5760013DAED /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				52B919441679C5760013DAED /* JSONKit.h */,
+				52B919451679C5760013DAED /* JSONKit.m */,
+			);
+			path = JSONKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,8 +440,19 @@
 			files = (
 				52B917E01677A9860013DAED /* main.mm in Sources */,
 				52B917E41677A9860013DAED /* AppDelegate.m in Sources */,
-				52B917F31677A9860013DAED /* ViewController.m in Sources */,
 				52B9184E1677AE230013DAED /* QRCodeScannerViewController.mm in Sources */,
+				52B919291679A90A0013DAED /* AFHTTPClient.m in Sources */,
+				52B9192A1679A90A0013DAED /* AFHTTPRequestOperation.m in Sources */,
+				52B9192B1679A90A0013DAED /* AFImageRequestOperation.m in Sources */,
+				52B9192C1679A90A0013DAED /* AFJSONRequestOperation.m in Sources */,
+				52B9192D1679A90A0013DAED /* AFNetworkActivityIndicatorManager.m in Sources */,
+				52B9192E1679A90A0013DAED /* AFPropertyListRequestOperation.m in Sources */,
+				52B9192F1679A90A0013DAED /* AFURLConnectionOperation.m in Sources */,
+				52B919301679A90A0013DAED /* AFXMLRequestOperation.m in Sources */,
+				52B919311679A90A0013DAED /* UIImageView+AFNetworking.m in Sources */,
+				52B9193B1679AE590013DAED /* SRDataSource.m in Sources */,
+				52B919461679C5760013DAED /* JSONKit.m in Sources */,
+				52B919501679CEC50013DAED /* SRSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

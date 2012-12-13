@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ZXingWidgetController.h"
 
-@interface QRCodeScannerViewController : UIViewController <ZXingDelegate> /*{
-    IBOutlet UITextView *resultsView;
-    NSString *resultsToDisplay;
-}*/
+@interface QRCodeScannerViewController : UIViewController <ZXingDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *resultText;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
