@@ -73,16 +73,15 @@ NSString * const SRAPIdomain = @"http://disa.csie.ntu.edu.tw";
     
     NSString *path = @"~blt/sweetreward/php/userActionTrigger.php";
     NSString *requestString = [NSString stringWithFormat:@"%@/%@?window_id=%d&token=%@", SRAPIdomain, path, windowID, token];
-    NSLog(@"%@", requestString);
+    //NSLog(@"%@", requestString);
     NSURL *jsonURL = [NSURL URLWithString:requestString];
     
     NSString *jsonString = [[NSString alloc] initWithContentsOfURL:jsonURL encoding:NSUTF8StringEncoding error:nil];
     
-    NSLog(@"%@", jsonString);
+    //NSLog(@"%@", jsonString);
     
     NSDictionary *result = [jsonString objectFromJSONString];
-    NSLog(@"window result: %@", result);
-
+    //NSLog(@"window result: %@", result);
     return YES;
 }
 

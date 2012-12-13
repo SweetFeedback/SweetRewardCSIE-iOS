@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 
-- (IBAction)scanPressed:(UIButton *)sender;
+- (IBAction)scanPressed:(UIBarButtonItem *)sender;
 
 
 @end

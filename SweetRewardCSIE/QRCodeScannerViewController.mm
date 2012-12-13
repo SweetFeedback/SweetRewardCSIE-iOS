@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSString *urlString = @"";
+    NSString *urlString = @"http://disa.csie.ntu.edu.tw/~blt/sweetreward";
     NSURL *url = [NSURL URLWithString:urlString];
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
@@ -48,7 +48,7 @@
     if (self.isViewLoaded) {
         self.resultText.text = result;
         
-        NSInteger windowID = 1;
+        NSInteger windowID = [result integerValue];
         BOOL result = [[SRDataSource sharedSRDataSource] submitWindowByWindowID:windowID];
         
         if(result) {
@@ -81,7 +81,7 @@
 
 #pragma mark - scan button
 
-- (IBAction)scanPressed:(UIButton *)sender {
+- (IBAction)scanPressed:(UIBarButtonItem *)sender {
     ZXingWidgetController *widController = [[ZXingWidgetController alloc] initWithDelegate:self showCancel:YES OneDMode:NO];
     
     NSMutableSet *readers = [[NSMutableSet alloc ] init];
@@ -92,6 +92,7 @@
     
     
     [self presentModalViewController:widController animated:YES];
+    
 }
 
 

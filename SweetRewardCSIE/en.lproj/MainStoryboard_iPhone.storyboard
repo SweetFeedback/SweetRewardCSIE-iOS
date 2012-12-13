@@ -4,59 +4,58 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Code Scanner View Controller - Scan-->
+        <!--Code Scanner View Controller - SweetReward-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="QRCodeScannerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="scan" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAF-OK-c5M">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Scan">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="scanPressed:" destination="2" eventType="touchUpInside" id="z9C-YH-P4G"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Result" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FkD-Od-npg">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qE9-IL-cTX">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="KTY-9n-uOf"/>
-                                    <constraint firstAttribute="height" constant="128" id="YT1-a1-deo"/>
+                                    <constraint firstAttribute="height" constant="462" id="v6U-4p-6V4"/>
                                 </constraints>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WAF-OK-c5M" firstAttribute="centerX" secondItem="FkD-Od-npg" secondAttribute="centerX" type="default" id="2ga-4V-Y3B"/>
-                            <constraint firstAttribute="trailing" secondItem="FkD-Od-npg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ap7-Hb-UzM"/>
-                            <constraint firstItem="qE9-IL-cTX" firstAttribute="top" secondItem="3" secondAttribute="top" constant="226" id="EWm-LY-W92"/>
-                            <constraint firstItem="qE9-IL-cTX" firstAttribute="centerX" secondItem="FkD-Od-npg" secondAttribute="centerX" type="default" id="GOK-1I-I7B"/>
-                            <constraint firstItem="FkD-Od-npg" firstAttribute="top" secondItem="3" secondAttribute="top" constant="118" id="Wh8-sp-btZ"/>
-                            <constraint firstItem="WAF-OK-c5M" firstAttribute="top" secondItem="3" secondAttribute="top" constant="36" id="ff7-ax-rJy"/>
-                            <constraint firstItem="FkD-Od-npg" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="k6M-r4-p54"/>
+                            <constraint firstItem="qE9-IL-cTX" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="4qU-ye-7Ex"/>
+                            <constraint firstItem="qE9-IL-cTX" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="6x2-aa-q10"/>
+                            <constraint firstItem="qE9-IL-cTX" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="HXE-WO-KRu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Scan" id="5gI-E4-yaE"/>
+                    <navigationItem key="navigationItem" title="SweetReward" id="JQN-Df-8ZU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="uG4-xf-Fyg">
+                            <connections>
+                                <action selector="scanPressed:" destination="2" id="nUI-Ut-gnc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="resultText" destination="FkD-Od-npg" id="v82-WA-4Qx"/>
                         <outlet property="webView" destination="qE9-IL-cTX" id="Msl-IZ-Ye9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57" y="-701"/>
+            <point key="canvasLocation" x="361" y="-802"/>
+        </scene>
+        <!--Navigation Controller - Scan-->
+        <scene sceneID="X3r-nt-xjM">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="f66-4u-SQR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Scan" id="a8f-bb-m3p"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qhs-dk-qPe">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="K3e-np-ePn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DVX-1H-yob" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60" y="-802"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zI4-e2-XC5">
@@ -69,20 +68,20 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="KsP-hF-Upk"/>
-                        <segue destination="t4j-Ap-kz4" kind="relationship" relationship="viewControllers" id="BHo-mR-tku"/>
+                        <segue destination="f66-4u-SQR" kind="relationship" relationship="viewControllers" id="wO5-18-HcT"/>
+                        <segue destination="3mh-pJ-89c" kind="relationship" relationship="viewControllers" id="qhr-wO-cSG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZa-21-0wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-495" y="-367"/>
+            <point key="canvasLocation" x="-605" y="-453"/>
         </scene>
         <!--Setting View Controller - Setting-->
         <scene sceneID="7KG-Tf-yT2">
             <objects>
-                <viewController id="t4j-Ap-kz4" customClass="SRSettingViewController" sceneMemberID="viewController">
+                <viewController id="t4j-Ap-kz4" customClass="SettingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yPu-Mq-ece">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="sweetreward" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dC-JR-NUv">
@@ -110,7 +109,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitPressed:" destination="t4j-Ap-kz4" eventType="touchUpInside" id="aJ4-8e-W7Z"/>
+                                    <action selector="submitPressed:" destination="t4j-Ap-kz4" eventType="touchUpInside" id="tgO-AH-hos"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVm-1H-JNa">
@@ -140,15 +139,111 @@
                             <constraint firstItem="RxA-ea-4eG" firstAttribute="leading" secondItem="yPu-Mq-ece" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zYy-UC-LxD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Setting" id="o2d-KN-bdU"/>
+                    <navigationItem key="navigationItem" title="Setting" id="dl0-h6-RaI"/>
                     <connections>
-                        <outlet property="accountText" destination="3dC-JR-NUv" id="gld-ac-pbr"/>
-                        <outlet property="passwordText" destination="nB6-vs-cxk" id="cYb-tv-8qV"/>
+                        <outlet property="accountTextField" destination="3dC-JR-NUv" id="ngG-Mn-qjX"/>
+                        <outlet property="passwordTextField" destination="nB6-vs-cxk" id="Cr7-Wg-UuL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rck-B1-2ks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57" y="0.0"/>
+            <point key="canvasLocation" x="369" y="-98"/>
+        </scene>
+        <!--Setting View Controller - Setting-->
+        <scene sceneID="yCy-EX-rDG">
+            <objects>
+                <tableViewController id="WUW-7P-oVC" customClass="SRSettingViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="kLI-DN-CLC">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" id="sMl-95-f4r" customClass="SRSettingTextViewCell">
+                                <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="SweetReward" translatesAutoresizingMaskIntoConstraints="NO" id="oNC-d2-15o">
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="191" id="b9A-2f-b4V"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe8-LJ-KVD">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="oNC-d2-15o" firstAttribute="leading" secondItem="sMl-95-f4r" secondAttribute="leading" constant="119" id="4PN-cA-BKk"/>
+                                    <constraint firstItem="Oe8-LJ-KVD" firstAttribute="bottom" secondItem="oNC-d2-15o" secondAttribute="bottom" type="default" id="IrZ-Gp-Ee9"/>
+                                    <constraint firstItem="Oe8-LJ-KVD" firstAttribute="leading" secondItem="sMl-95-f4r" secondAttribute="leading" constant="30" id="QqD-rD-H0I"/>
+                                    <constraint firstItem="oNC-d2-15o" firstAttribute="top" secondItem="sMl-95-f4r" secondAttribute="top" constant="12" id="f5K-46-6Mf"/>
+                                    <constraint firstItem="Oe8-LJ-KVD" firstAttribute="centerY" secondItem="oNC-d2-15o" secondAttribute="centerY" type="default" id="nge-9b-Nr9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="label" destination="Oe8-LJ-KVD" id="izt-CM-CBY"/>
+                                    <outlet property="textView" destination="oNC-d2-15o" id="5km-aP-HcJ"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ButtonCell" id="7Lv-lp-k6D" customClass="SRButtonViewCell">
+                                <rect key="frame" x="0.0" y="91" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Button" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzP-Fk-eaL">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="IzP-Fk-eaL" firstAttribute="top" secondItem="7Lv-lp-k6D" secondAttribute="top" constant="11" id="UQv-XC-2YM"/>
+                                    <constraint firstItem="IzP-Fk-eaL" firstAttribute="centerX" secondItem="7Lv-lp-k6D" secondAttribute="centerX" type="default" id="mqj-fi-VEb"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="textLabel" destination="IzP-Fk-eaL" id="UIj-P4-OUE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="WUW-7P-oVC" id="E04-G4-vLB"/>
+                            <outlet property="delegate" destination="WUW-7P-oVC" id="beT-hV-b1w"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Setting" id="MSL-ma-7Ot"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ipp-aS-Ciw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721" y="-192"/>
+        </scene>
+        <!--Navigation Controller - Setting-->
+        <scene sceneID="cLg-fM-dqN">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="3mh-pJ-89c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Setting" id="ya1-EC-wDV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lfz-wr-FfC">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="t4j-Ap-kz4" kind="relationship" relationship="rootViewController" id="XZn-gb-vWc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ANg-Hp-GFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60" y="-98"/>
         </scene>
     </scenes>
     <classes>
@@ -158,17 +253,33 @@
         <class className="QRCodeScannerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/QRCodeScannerViewController.h"/>
             <relationships>
-                <relationship kind="action" name="scanPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="scanPressed:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="resultText" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
-        <class className="SRSettingViewController" superclassName="UIViewController">
+        <class className="SRButtonViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRButtonViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SRSettingTextViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRSettingTextViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="SRSettingViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SRSettingViewController.h"/>
+        </class>
+        <class className="SettingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingViewController.h"/>
             <relationships>
                 <relationship kind="action" name="submitPressed:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="accountText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="accountTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
             </relationships>
         </class>
     </classes>

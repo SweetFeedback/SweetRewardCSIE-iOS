@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SRSettingViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *accountText;
-@property (weak, nonatomic) IBOutlet UITextField *passwordText;
-- (IBAction)submitPressed:(UIButton *)sender;
+@interface SRSettingViewController : UITableViewController <UITextViewDelegate>
+
+@property (strong, nonatomic) NSString *account;
+@property (strong, nonatomic) NSString *password;
 
 @end

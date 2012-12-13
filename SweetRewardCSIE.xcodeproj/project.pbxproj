@@ -43,7 +43,12 @@
 		52B919311679A90A0013DAED /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B919281679A90A0013DAED /* UIImageView+AFNetworking.m */; };
 		52B9193B1679AE590013DAED /* SRDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B9193A1679AE590013DAED /* SRDataSource.m */; };
 		52B919461679C5760013DAED /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B919451679C5760013DAED /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		52B919501679CEC50013DAED /* SRSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B9194F1679CEC50013DAED /* SRSettingViewController.m */; };
+		52B919531679F5160013DAED /* SRSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B919521679F5160013DAED /* SRSettingViewController.m */; };
+		52B9195C1679F9870013DAED /* SRTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B9195B1679F9870013DAED /* SRTextViewCell.m */; };
+		52B9195E1679FA120013DAED /* SRTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B9195D1679FA110013DAED /* SRTextViewCell.xib */; };
+		52B91961167A0F340013DAED /* SRButtonViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B91960167A0F330013DAED /* SRButtonViewCell.m */; };
+		52B91965167A14790013DAED /* SRSettingTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B91964167A14780013DAED /* SRSettingTextViewCell.m */; };
+		52B91999167A204F0013DAED /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B91998167A204F0013DAED /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,8 +137,17 @@
 		52B9193A1679AE590013DAED /* SRDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDataSource.m; sourceTree = "<group>"; };
 		52B919441679C5760013DAED /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		52B919451679C5760013DAED /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		52B9194E1679CEC50013DAED /* SRSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSettingViewController.h; sourceTree = "<group>"; };
-		52B9194F1679CEC50013DAED /* SRSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSettingViewController.m; sourceTree = "<group>"; };
+		52B919511679F5160013DAED /* SRSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSettingViewController.h; sourceTree = "<group>"; };
+		52B919521679F5160013DAED /* SRSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSettingViewController.m; sourceTree = "<group>"; };
+		52B9195A1679F9870013DAED /* SRTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRTextViewCell.h; sourceTree = "<group>"; };
+		52B9195B1679F9870013DAED /* SRTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRTextViewCell.m; sourceTree = "<group>"; };
+		52B9195D1679FA110013DAED /* SRTextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRTextViewCell.xib; sourceTree = "<group>"; };
+		52B9195F167A0F330013DAED /* SRButtonViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRButtonViewCell.h; sourceTree = "<group>"; };
+		52B91960167A0F330013DAED /* SRButtonViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRButtonViewCell.m; sourceTree = "<group>"; };
+		52B91963167A14780013DAED /* SRSettingTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSettingTextViewCell.h; sourceTree = "<group>"; };
+		52B91964167A14780013DAED /* SRSettingTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSettingTextViewCell.m; sourceTree = "<group>"; };
+		52B91997167A204F0013DAED /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		52B91998167A204F0013DAED /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,8 +234,17 @@
 				52B9184D1677AE230013DAED /* QRCodeScannerViewController.mm */,
 				52B919391679AE590013DAED /* SRDataSource.h */,
 				52B9193A1679AE590013DAED /* SRDataSource.m */,
-				52B9194E1679CEC50013DAED /* SRSettingViewController.h */,
-				52B9194F1679CEC50013DAED /* SRSettingViewController.m */,
+				52B919511679F5160013DAED /* SRSettingViewController.h */,
+				52B919521679F5160013DAED /* SRSettingViewController.m */,
+				52B9195A1679F9870013DAED /* SRTextViewCell.h */,
+				52B9195B1679F9870013DAED /* SRTextViewCell.m */,
+				52B9195D1679FA110013DAED /* SRTextViewCell.xib */,
+				52B9195F167A0F330013DAED /* SRButtonViewCell.h */,
+				52B91960167A0F330013DAED /* SRButtonViewCell.m */,
+				52B91963167A14780013DAED /* SRSettingTextViewCell.h */,
+				52B91964167A14780013DAED /* SRSettingTextViewCell.m */,
+				52B91997167A204F0013DAED /* SettingViewController.h */,
+				52B91998167A204F0013DAED /* SettingViewController.m */,
 			);
 			path = SweetRewardCSIE;
 			sourceTree = "<group>";
@@ -404,6 +427,7 @@
 				52B917EA1677A9860013DAED /* Default-568h@2x.png in Resources */,
 				52B917ED1677A9860013DAED /* MainStoryboard_iPhone.storyboard in Resources */,
 				52B917F01677A9860013DAED /* MainStoryboard_iPad.storyboard in Resources */,
+				52B9195E1679FA120013DAED /* SRTextViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +476,11 @@
 				52B919311679A90A0013DAED /* UIImageView+AFNetworking.m in Sources */,
 				52B9193B1679AE590013DAED /* SRDataSource.m in Sources */,
 				52B919461679C5760013DAED /* JSONKit.m in Sources */,
-				52B919501679CEC50013DAED /* SRSettingViewController.m in Sources */,
+				52B919531679F5160013DAED /* SRSettingViewController.m in Sources */,
+				52B9195C1679F9870013DAED /* SRTextViewCell.m in Sources */,
+				52B91961167A0F340013DAED /* SRButtonViewCell.m in Sources */,
+				52B91965167A14790013DAED /* SRSettingTextViewCell.m in Sources */,
+				52B91999167A204F0013DAED /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
