@@ -3,7 +3,8 @@ SweetRewardCSIE-iOS
 
 This project uses ZXing for QRCode scanner, please refer the instructions to include ZXingWidget into our project:
 https://github.com/zxing/zxing/tree/master/iphone
-
+And JSONKit:
+http://stackoverflow.com/questions/10010641/errors-on-jsonkit-implement
 
 Troble shooting:
 
