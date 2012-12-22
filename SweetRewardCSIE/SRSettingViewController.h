@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SRSettingViewController : UITableViewController <UITextViewDelegate>
+@interface SRSettingViewController : UITableViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) NSString *account;
 @property (strong, nonatomic) NSString *password;

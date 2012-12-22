@@ -11,6 +11,7 @@
 #import "JSONKit.h"
 
 NSString * const SRAPIdomain = @"http://disa.csie.ntu.edu.tw";
+NSString * const SRUserToken = @"token";
 
 @implementation SRDataSource
 
@@ -26,33 +27,51 @@ NSString * const SRAPIdomain = @"http://disa.csie.ntu.edu.tw";
 - (id)init {
     if(self = [super init]) {
         _userDefaults = [NSUserDefaults standardUserDefaults];
+        _isLogin = NO;
     }
 
     
     return self;
 }
 
-- (BOOL)submitUserAccountByAccount:(NSString *)account andPassword:(NSString *)password {
-    NSString *token = [self.userDefaults valueForKey:@"token"];
+- (BOOL)createOrLoginUserAccountByAccount:(NSString *)account andPassword:(NSString *)password {
+    NSString *token = [self.userDefaults valueForKey:SRUserToken];
+    
     if(token != nil) {
         return YES;
     }
+    NSLog(@"GO");
     
     //NSString *path = @"~blt/sweetreward/php/mobile/createNewUser.php";
-    NSString *path = @"~blt/sweetreward/php/mobile/verifyUser.php";
+    NSString *path = @"~blt/sweetreward/php/mobile/createNewUser.php";
     NSString *requestString = [NSString stringWithFormat:@"%@/%@?account=%@&password=%@", SRAPIdomain, path, account, password];
     NSURL *jsonURL = [NSURL URLWithString:requestString];
     
     NSString *jsonString = [[NSString alloc] initWithContentsOfURL:jsonURL encoding:NSUTF8StringEncoding error:nil];
+    
+    NSLog(@"jsonstring %@", jsonString);
+    /*
+    // maybe the user account already exists, so try login
     if(jsonString == nil) {
-        return NO;
-    }
+        path = @"~blt/sweetreward/php/mobile/verifyUser.php";
+        requestString = [NSString stringWithFormat:@"%@/%@?account=%@&password=%@", SRAPIdomain, path, account, password];
+        jsonURL = [NSURL URLWithString:requestString];
+        
+        jsonString = [[NSString alloc] initWithContentsOfURL:jsonURL encoding:NSUTF8StringEncoding error:nil];
+        
+        NSLog(@"try to verify user");
+        if(jsonString == nil);
+            return NO;
+    }*/
     
     NSDictionary *result = [jsonString objectFromJSONString];
+    NSLog(@"%@", result);
     token = result[@"token"];
     
     [self.userDefaults setValue:token forKey:@"token"];
     [self.userDefaults synchronize];
+    
+    self.isLogin = YES;
     
 #warning fix this
     /*
@@ -68,7 +87,11 @@ NSString * const SRAPIdomain = @"http://disa.csie.ntu.edu.tw";
     return YES;
 }
 
-- (BOOL) submitWindowByWindowID:(NSInteger)windowID {
+- (BOOL)logoutUserAccount {
+    NSLog(@"logout");
+}
+
+- (BOOL)submitWindowByWindowID:(NSInteger)windowID {
     NSString *token = [self.userDefaults valueForKey:@"token"];
     
     NSString *path = @"~blt/sweetreward/php/userActionTrigger.php";

@@ -8,13 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const SRUserToken;
+
 @interface SRDataSource : NSObject
 
 @property(strong, nonatomic) NSUserDefaults *userDefaults;
-@property(weak, nonatomic) NSString *userToken;
+@property(nonatomic) BOOL isLogin;
 
 + (SRDataSource *)sharedSRDataSource;
-- (BOOL)submitUserAccountByAccount:(NSString *)account andPassword:(NSString *)password;
+- (BOOL)createOrLoginUserAccountByAccount:(NSString *)account andPassword:(NSString *)password;
+- (BOOL)logoutUserAccount;
 - (BOOL)submitWindowByWindowID:(NSInteger)windowID;
 
 

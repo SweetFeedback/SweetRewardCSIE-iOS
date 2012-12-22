@@ -41,7 +41,7 @@
     NSString *password = self.passwordTextField.text;
     
     BOOL result;
-    result = [[SRDataSource sharedSRDataSource] submitUserAccountByAccount:account andPassword:password];
+    result = [[SRDataSource sharedSRDataSource] createOrLoginUserAccountByAccount:account andPassword:password];
     
     if(result) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil

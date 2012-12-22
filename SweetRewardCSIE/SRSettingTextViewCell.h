@@ -10,6 +10,6 @@
 
 @interface SRSettingTextViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *label;
-@property (strong, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UITextField *textField;
 
 @end

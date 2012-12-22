@@ -81,7 +81,7 @@
             <objects>
                 <viewController id="t4j-Ap-kz4" customClass="SettingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yPu-Mq-ece">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="sweetreward" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dC-JR-NUv">
@@ -154,7 +154,7 @@
             <objects>
                 <tableViewController id="WUW-7P-oVC" customClass="SRSettingViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="kLI-DN-CLC">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -165,32 +165,31 @@
                                     <rect key="frame" x="10" y="1" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="SweetReward" translatesAutoresizingMaskIntoConstraints="NO" id="oNC-d2-15o">
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="191" id="b9A-2f-b4V"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe8-LJ-KVD">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="sweetreward" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rxa-P2-pwT">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="186" id="76R-NT-4Fl"/>
+                                                <constraint firstAttribute="height" constant="30" id="nA3-e4-p1P"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="oNC-d2-15o" firstAttribute="leading" secondItem="sMl-95-f4r" secondAttribute="leading" constant="119" id="4PN-cA-BKk"/>
-                                    <constraint firstItem="Oe8-LJ-KVD" firstAttribute="bottom" secondItem="oNC-d2-15o" secondAttribute="bottom" type="default" id="IrZ-Gp-Ee9"/>
+                                    <constraint firstItem="rxa-P2-pwT" firstAttribute="top" secondItem="sMl-95-f4r" secondAttribute="top" constant="8" id="QlL-tt-dU3"/>
                                     <constraint firstItem="Oe8-LJ-KVD" firstAttribute="leading" secondItem="sMl-95-f4r" secondAttribute="leading" constant="30" id="QqD-rD-H0I"/>
-                                    <constraint firstItem="oNC-d2-15o" firstAttribute="top" secondItem="sMl-95-f4r" secondAttribute="top" constant="12" id="f5K-46-6Mf"/>
-                                    <constraint firstItem="Oe8-LJ-KVD" firstAttribute="centerY" secondItem="oNC-d2-15o" secondAttribute="centerY" type="default" id="nge-9b-Nr9"/>
+                                    <constraint firstItem="rxa-P2-pwT" firstAttribute="leading" secondItem="sMl-95-f4r" secondAttribute="leading" constant="124" id="fw4-uy-ZNp"/>
+                                    <constraint firstItem="Oe8-LJ-KVD" firstAttribute="centerY" secondItem="sMl-95-f4r" secondAttribute="centerY" type="default" id="xUa-Tg-kKp"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="label" destination="Oe8-LJ-KVD" id="izt-CM-CBY"/>
-                                    <outlet property="textView" destination="oNC-d2-15o" id="5km-aP-HcJ"/>
+                                    <outlet property="textField" destination="rxa-P2-pwT" id="xxv-T2-CMa"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ButtonCell" id="7Lv-lp-k6D" customClass="SRButtonViewCell">
@@ -200,7 +199,7 @@
                                     <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Button" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzP-Fk-eaL">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Button" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzP-Fk-eaL">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -227,7 +226,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ipp-aS-Ciw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="-192"/>
+            <point key="canvasLocation" x="751" y="-108"/>
         </scene>
         <!--Navigation Controller - Setting-->
         <scene sceneID="cLg-fM-dqN">
@@ -238,7 +237,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="t4j-Ap-kz4" kind="relationship" relationship="rootViewController" id="XZn-gb-vWc"/>
+                        <segue destination="WUW-7P-oVC" kind="relationship" relationship="rootViewController" id="pPx-oB-Vql"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANg-Hp-GFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -268,7 +267,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SRSettingTextViewCell.h"/>
             <relationships>
                 <relationship kind="outlet" name="label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="SRSettingViewController" superclassName="UITableViewController">
