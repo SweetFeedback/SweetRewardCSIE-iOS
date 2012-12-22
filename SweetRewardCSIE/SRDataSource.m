@@ -89,6 +89,8 @@ NSString * const SRUserToken = @"token";
 
 - (BOOL)logoutUserAccount {
     NSLog(@"logout");
+    self.isLogin = NO;
+    return YES;
 }
 
 - (BOOL)submitWindowByWindowID:(NSInteger)windowID {

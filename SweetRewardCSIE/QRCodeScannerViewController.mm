@@ -32,6 +32,8 @@
     NSString *urlString = @"http://disa.csie.ntu.edu.tw/~blt/sweetreward";
     NSURL *url = [NSURL URLWithString:urlString];
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+    [self createAudioPlayer];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,6 +60,7 @@
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles: nil];
             [alert show];
+            [self playAudio];
         } else {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
                                                             message:@"Submit failed"
@@ -93,6 +96,31 @@
     
     [self presentModalViewController:widController animated:YES];
     
+}
+
+#pragma mark - music
+
+- (void)createAudioPlayer {
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                         pathForResource:@"test"
+                                         ofType:@"mp3"]];
+    
+    NSError *error;
+    audioPlayer = [[AVAudioPlayer alloc]
+                   initWithContentsOfURL:url
+                   error:&error];
+    if (error)
+    {
+        NSLog(@"Error in audioPlayer: %@",
+              [error localizedDescription]);
+    } else {
+        audioPlayer.delegate = self;
+        [audioPlayer prepareToPlay];
+    }
+}
+
+- (void)playAudio {
+    [audioPlayer play];
 }
 
 

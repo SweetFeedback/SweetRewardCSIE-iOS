@@ -49,6 +49,7 @@
 		52B91961167A0F340013DAED /* SRButtonViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B91960167A0F330013DAED /* SRButtonViewCell.m */; };
 		52B91965167A14790013DAED /* SRSettingTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B91964167A14780013DAED /* SRSettingTextViewCell.m */; };
 		52B91999167A204F0013DAED /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B91998167A204F0013DAED /* SettingViewController.m */; };
+		52E6F11816859A78006DCFBD /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 52E6F11716859A78006DCFBD /* test.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,7 @@
 		52B91964167A14780013DAED /* SRSettingTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSettingTextViewCell.m; sourceTree = "<group>"; };
 		52B91997167A204F0013DAED /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		52B91998167A204F0013DAED /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		52E6F11716859A78006DCFBD /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 		52B917C41677A9860013DAED = {
 			isa = PBXGroup;
 			children = (
+				52E6F116168597F9006DCFBD /* Resources */,
 				52B919431679C5760013DAED /* JSONKit */,
 				52B919151679A90A0013DAED /* AFNetworking */,
 				52B9189C16787F200013DAED /* ZXingWidget.xcodeproj */,
@@ -326,6 +329,14 @@
 			path = JSONKit;
 			sourceTree = "<group>";
 		};
+		52E6F116168597F9006DCFBD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52E6F11716859A78006DCFBD /* test.mp3 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -428,6 +439,7 @@
 				52B917ED1677A9860013DAED /* MainStoryboard_iPhone.storyboard in Resources */,
 				52B917F01677A9860013DAED /* MainStoryboard_iPad.storyboard in Resources */,
 				52B9195E1679FA120013DAED /* SRTextViewCell.xib in Resources */,
+				52E6F11816859A78006DCFBD /* test.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

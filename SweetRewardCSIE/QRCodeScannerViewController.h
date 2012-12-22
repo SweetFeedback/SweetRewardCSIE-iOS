@@ -7,13 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "ZXingWidgetController.h"
 
-@interface QRCodeScannerViewController : UIViewController <ZXingDelegate>
+@interface QRCodeScannerViewController : UIViewController <ZXingDelegate, AVAudioPlayerDelegate> {
+    AVAudioPlayer *audioPlayer;
+}
 
 @property (weak, nonatomic) IBOutlet UITextField *resultText;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
+@property (nonatomic, retain) IBOutlet UISlider *volumeControl;
+-(IBAction) playAudio;
+-(IBAction) stopAudio;
+-(IBAction) adjustVolume;
 
 - (IBAction)scanPressed:(UIBarButtonItem *)sender;
 
