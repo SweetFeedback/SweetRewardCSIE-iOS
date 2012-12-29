@@ -93,11 +93,11 @@ NSString * const SRUserToken = @"token";
     return YES;
 }
 
-- (BOOL)submitWindowByWindowID:(NSInteger)windowID {
+- (BOOL)submitWindowByWindowID:(NSInteger)windowID andAction:(NSInteger)action{
     NSString *token = [self.userDefaults valueForKey:@"token"];
     
     NSString *path = @"~blt/sweetreward/php/userActionTrigger.php";
-    NSString *requestString = [NSString stringWithFormat:@"%@/%@?window_id=%d&token=%@", SRAPIdomain, path, windowID, token];
+    NSString *requestString = [NSString stringWithFormat:@"%@/%@?window_id=%d&token=%@&action=%d", SRAPIdomain, path, windowID, token, action];
     //NSLog(@"%@", requestString);
     NSURL *jsonURL = [NSURL URLWithString:requestString];
     
@@ -107,6 +107,11 @@ NSString * const SRUserToken = @"token";
     
     NSDictionary *result = [jsonString objectFromJSONString];
     //NSLog(@"window result: %@", result);
+    if(result == nil) {
+        return YES;
+    } else {
+        return NO;
+    }
     return YES;
 }
 

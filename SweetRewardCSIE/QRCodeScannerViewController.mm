@@ -51,7 +51,8 @@
         self.resultText.text = result;
         
         NSInteger windowID = [result integerValue];
-        BOOL result = [[SRDataSource sharedSRDataSource] submitWindowByWindowID:windowID];
+        NSInteger action = 0;
+        BOOL result = [[SRDataSource sharedSRDataSource] submitWindowByWindowID:windowID andAction:action];
         
         if(result) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil

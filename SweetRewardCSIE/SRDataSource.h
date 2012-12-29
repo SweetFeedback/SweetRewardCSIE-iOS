@@ -18,7 +18,7 @@ extern NSString * const SRUserToken;
 + (SRDataSource *)sharedSRDataSource;
 - (BOOL)createOrLoginUserAccountByAccount:(NSString *)account andPassword:(NSString *)password;
 - (BOOL)logoutUserAccount;
-- (BOOL)submitWindowByWindowID:(NSInteger)windowID;
+- (BOOL)submitWindowByWindowID:(NSInteger)windowID andAction:(NSInteger)action;
 
 
 @end
