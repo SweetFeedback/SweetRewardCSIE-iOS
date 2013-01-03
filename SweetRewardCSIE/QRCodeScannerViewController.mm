@@ -72,7 +72,7 @@
             [self playAudio];
         } else if(result == 0) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:@"Thank You!"
+                                                            message:@"Thank You! Go get some candies!"
                                                            delegate:self
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles: nil];
