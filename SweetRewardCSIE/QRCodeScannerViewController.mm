@@ -61,7 +61,6 @@
             NSLog(@"Unknown QRCode result");
         }
         
-        
         if(result == 1) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
                                                             message:@"Thank You!"
