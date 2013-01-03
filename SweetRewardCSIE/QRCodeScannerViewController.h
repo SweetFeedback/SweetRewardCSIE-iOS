@@ -14,7 +14,6 @@
     AVAudioPlayer *audioPlayer;
 }
 
-@property (weak, nonatomic) IBOutlet UITextField *resultText;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @property (nonatomic, retain) IBOutlet UISlider *volumeControl;

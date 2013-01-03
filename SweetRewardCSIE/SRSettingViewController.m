@@ -35,8 +35,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.account = @"sweetreward";
-    self.password = @"test";
+    self.account = [[SRDataSource sharedSRDataSource].userDefaults stringForKey:SRUserDefaultUserAccount];
+    self.password = [[SRDataSource sharedSRDataSource].userDefaults stringForKey:SRUserDefaultUserPassword];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,11 +55,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell;
     
     // Configure the cell...
-    NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
     
     if(row == 0) {
@@ -69,12 +67,10 @@
         }
         
         textCell.label.text = @"Account";
-        textCell.textField.text = @"sweetreward";
+        textCell.textField.text = self.account;
         textCell.textField.delegate = self;
-        self.account = textCell.textField.text;        
         [textCell setSelectionStyle:UITableViewCellSelectionStyleNone];
-        //textCell.textView.delegate = self;
-
+        
         cell = textCell;
     } else if(row == 1) {
         SRSettingTextViewCell *textCell = [tableView dequeueReusableCellWithIdentifier:@"TextCell"];
@@ -83,11 +79,9 @@
         }
         
         textCell.label.text = @"Password";
-        textCell.textField.text = @"test";
+        textCell.textField.text = self.password;
         textCell.textField.delegate = self;
-        self.password = textCell.textField.text;
         [textCell setSelectionStyle:UITableViewCellSelectionStyleNone];
-        //textCell.textView.delegate = self;
         
         cell = textCell;
     } else if(row == 2) {
@@ -146,6 +140,18 @@
 
 #pragma mark - UITextFieldDelegate
 
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    UITextField *accountTextField = [(SRSettingTextViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] textField];
+    UITextField *passwordTextField = [(SRSettingTextViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]] textField];
+    
+    if(textField == accountTextField){
+        self.account = textField.text;
+    }else if(textField == passwordTextField){
+        self.password = textField.text;
+    }
+}
+
+
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     if([SRDataSource sharedSRDataSource].isLogin) {
         return NO;
@@ -153,32 +159,41 @@
     return YES;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    UITextField *accountTextField = [(SRSettingTextViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] textField];
+    UITextField *passwordTextField = [(SRSettingTextViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]] textField];
+    
+    if(textField == accountTextField){
+        [passwordTextField becomeFirstResponder];
+    }else if(textField == passwordTextField){
+
+    }
+    
+    return YES;
+}
+
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSInteger section = indexPath.section;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = indexPath.row;
     
     if(row == 2) {
         if([SRDataSource sharedSRDataSource].isLogin) {
             [[SRDataSource sharedSRDataSource] logoutUserAccount];
         } else {
-            NSString *account = self.account;
-            NSString *password = self.password;
+            NSString *account = [(SRSettingTextViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] textField].text;
+            NSString *password = [(SRSettingTextViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]] textField].text;
+            
+            self.account = account;
+            self.password = password;
+            
             [[SRDataSource sharedSRDataSource] createOrLoginUserAccountByAccount:account andPassword:password];
         }
+        [tableView reloadData];
     }
     
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [tableView reloadData];
 }
 
 @end

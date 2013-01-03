@@ -11,7 +11,16 @@
 #import "JSONKit.h"
 
 NSString * const SRAPIdomain = @"http://disa.csie.ntu.edu.tw";
-NSString * const SRUserToken = @"token";
+
+NSString * const SRUserDefaultUserToken = @"token";
+NSString * const SRUserDefaultUserAccount = @"account";
+NSString * const SRUserDefaultUserPassword = @"password";
+
+NSString * const SRServerUserToken = @"token";
+NSString * const SRServerUserAccount = @"account";
+NSString * const SRServerUserPassword = @"password";
+NSString * const SRServerGetFeedback = @"get_feedback";
+NSString * const SRServerStatus = @"status";
 
 @implementation SRDataSource
 
@@ -27,92 +36,93 @@ NSString * const SRUserToken = @"token";
 - (id)init {
     if(self = [super init]) {
         _userDefaults = [NSUserDefaults standardUserDefaults];
-        _isLogin = NO;
+        
+        NSString *token = [self.userDefaults valueForKey:SRUserDefaultUserToken];
+        if(token != nil) {
+            _isLogin = YES;
+        } else {
+            _isLogin = NO;
+        }   
     }
-
     
     return self;
 }
 
 - (BOOL)createOrLoginUserAccountByAccount:(NSString *)account andPassword:(NSString *)password {
-    NSString *token = [self.userDefaults valueForKey:SRUserToken];
-    
+    NSString *token = [self.userDefaults valueForKey:SRUserDefaultUserToken];
     if(token != nil) {
         return YES;
     }
-    NSLog(@"GO");
-    
-    //NSString *path = @"~blt/sweetreward/php/mobile/createNewUser.php";
+
     NSString *path = @"~blt/sweetreward/php/mobile/createNewUser.php";
     NSString *requestString = [NSString stringWithFormat:@"%@/%@?account=%@&password=%@", SRAPIdomain, path, account, password];
     NSURL *jsonURL = [NSURL URLWithString:requestString];
     
     NSString *jsonString = [[NSString alloc] initWithContentsOfURL:jsonURL encoding:NSUTF8StringEncoding error:nil];
     
-    NSLog(@"jsonstring %@", jsonString);
-    /*
-    // maybe the user account already exists, so try login
-    if(jsonString == nil) {
-        path = @"~blt/sweetreward/php/mobile/verifyUser.php";
-        requestString = [NSString stringWithFormat:@"%@/%@?account=%@&password=%@", SRAPIdomain, path, account, password];
-        jsonURL = [NSURL URLWithString:requestString];
-        
-        jsonString = [[NSString alloc] initWithContentsOfURL:jsonURL encoding:NSUTF8StringEncoding error:nil];
-        
-        NSLog(@"try to verify user");
-        if(jsonString == nil);
-            return NO;
-    }*/
-    
     NSDictionary *result = [jsonString objectFromJSONString];
-    NSLog(@"%@", result);
-    token = result[@"token"];
-    
-    [self.userDefaults setValue:token forKey:@"token"];
+    token = result[SRServerUserToken];
+
+    [self.userDefaults setValue:token forKey:SRUserDefaultUserToken];
+    [self.userDefaults setValue:account forKey:SRUserDefaultUserAccount];
+    [self.userDefaults setValue:password forKey:SRUserDefaultUserPassword];
     [self.userDefaults synchronize];
     
     self.isLogin = YES;
-    
-#warning fix this
-    /*
-     [[AFJSONRequestOperation JSONRequestOperationWithRequest:[NSURLRequest requestWithURL:jsonURL]
-     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-     NSLog(@"%@", JSON);
-     NSLog(@"%@", JSON[@"token"]);
-     } failure:nil] start];
-     */
-    
-
     
     return YES;
 }
 
 - (BOOL)logoutUserAccount {
-    NSLog(@"logout");
+    [self.userDefaults setValue:nil forKey:SRUserDefaultUserToken];
+    [self.userDefaults synchronize];
     self.isLogin = NO;
     return YES;
 }
 
-- (BOOL)submitWindowByWindowID:(NSInteger)windowID andAction:(NSInteger)action{
-    NSString *token = [self.userDefaults valueForKey:@"token"];
+
+- (NSInteger)submitWindowByWindowID:(NSInteger)windowID {
+    NSString *token = [self.userDefaults valueForKey:SRUserDefaultUserToken];
+    
+    NSString *path = @"~blt/sweetreward/php/userActionTrigger.php";
+    NSString *requestString = [NSString stringWithFormat:@"%@/%@?window_id=%d&token=%@", SRAPIdomain, path, windowID, token];
+    NSURL *jsonURL = [NSURL URLWithString:requestString];
+    NSString *jsonString = [[NSString alloc] initWithContentsOfURL:jsonURL encoding:NSUTF8StringEncoding error:nil];
+    
+    
+    NSDictionary *result = [jsonString objectFromJSONString];
+    NSInteger status = [[result objectForKey:SRServerStatus] integerValue];
+    NSInteger getFeedback = [[result objectForKey:SRServerGetFeedback] integerValue];
+    
+    if(getFeedback == 1)
+        return 1;
+    
+    if(status == 0)
+        return 0;
+    
+    return -1;
+}
+
+- (NSInteger)submitWindowByWindowID:(NSInteger)windowID andAction:(NSInteger)action{
+    NSString *token = [self.userDefaults valueForKey:SRServerUserToken];
     
     NSString *path = @"~blt/sweetreward/php/userActionTrigger.php";
     NSString *requestString = [NSString stringWithFormat:@"%@/%@?window_id=%d&token=%@&action=%d", SRAPIdomain, path, windowID, token, action];
-    //NSLog(@"%@", requestString);
     NSURL *jsonURL = [NSURL URLWithString:requestString];
-    
     NSString *jsonString = [[NSString alloc] initWithContentsOfURL:jsonURL encoding:NSUTF8StringEncoding error:nil];
     
-    //NSLog(@"%@", jsonString);
     
     NSDictionary *result = [jsonString objectFromJSONString];
-    //NSLog(@"window result: %@", result);
-    if(result == nil) {
-        return YES;
-    } else {
-        return NO;
-    }
-    return YES;
+    NSInteger status = [[result objectForKey:SRServerStatus] integerValue];
+    NSInteger getFeedback = [[result objectForKey:SRServerGetFeedback] integerValue];
+    
+    if(getFeedback == 1)
+        return 1;
+    
+    if(status == 0)
+        return 0;
+    
+    return -1;
 }
 
 @end

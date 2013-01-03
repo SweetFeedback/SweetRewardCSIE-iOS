@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * const SRUserToken;
+extern NSString * const SRUserDefaultUserToken;
+extern NSString * const SRUserDefaultUserAccount;
+extern NSString * const SRUserDefaultUserPassword;
 
 @interface SRDataSource : NSObject
 
@@ -18,7 +20,8 @@ extern NSString * const SRUserToken;
 + (SRDataSource *)sharedSRDataSource;
 - (BOOL)createOrLoginUserAccountByAccount:(NSString *)account andPassword:(NSString *)password;
 - (BOOL)logoutUserAccount;
-- (BOOL)submitWindowByWindowID:(NSInteger)windowID andAction:(NSInteger)action;
+- (NSInteger)submitWindowByWindowID:(NSInteger)windowID;
+- (NSInteger)submitWindowByWindowID:(NSInteger)windowID andAction:(NSInteger)action;
 
 
 @end

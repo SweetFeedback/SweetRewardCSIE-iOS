@@ -48,20 +48,36 @@
 - (void)zxingController:(ZXingWidgetController*)controller didScanResult:(NSString *)result {
     //self->resultsToDisplay = result;
     if (self.isViewLoaded) {
-        self.resultText.text = result;
+        NSArray *resultComponents = [result componentsSeparatedByString:@","];
         
-        NSInteger windowID = [result integerValue];
-        NSInteger action = 0;
-        BOOL result = [[SRDataSource sharedSRDataSource] submitWindowByWindowID:windowID andAction:action];
+        NSInteger result = -1;
+        NSInteger windowID = [resultComponents[0] integerValue];
+        if([resultComponents count] == 1) {
+            result = [[SRDataSource sharedSRDataSource] submitWindowByWindowID:windowID];
+        } else if([resultComponents count] == 2 ) {
+            NSInteger action = [resultComponents[1] integerValue];
+            result = [[SRDataSource sharedSRDataSource] submitWindowByWindowID:windowID andAction:action];
+        } else {
+            NSLog(@"Unknown QRCode result");
+        }
         
-        if(result) {
+        
+        if(result == 1) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:@"Submit successfully"
+                                                            message:@"Thank You!"
                                                            delegate:self
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles: nil];
             [alert show];
+            
             [self playAudio];
+        } else if(result == 0) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:@"Thank You!"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles: nil];
+            [alert show];
         } else {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
                                                             message:@"Submit failed"
@@ -86,16 +102,25 @@
 #pragma mark - scan button
 
 - (IBAction)scanPressed:(UIBarButtonItem *)sender {
-    ZXingWidgetController *widController = [[ZXingWidgetController alloc] initWithDelegate:self showCancel:YES OneDMode:NO];
-    
-    NSMutableSet *readers = [[NSMutableSet alloc ] init];
-    
-    QRCodeReader* qrcodeReader = [[QRCodeReader alloc] init];
-    [readers addObject:qrcodeReader];
-    widController.readers = readers;
-    
-    
-    [self presentModalViewController:widController animated:YES];
+    if([SRDataSource sharedSRDataSource].isLogin) {
+        ZXingWidgetController *widController = [[ZXingWidgetController alloc] initWithDelegate:self showCancel:YES OneDMode:NO];
+        
+        NSMutableSet *readers = [[NSMutableSet alloc ] init];
+        
+        QRCodeReader* qrcodeReader = [[QRCodeReader alloc] init];
+        [readers addObject:qrcodeReader];
+        widController.readers = readers;
+        
+        
+        [self presentModalViewController:widController animated:YES];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:@"Pleasee login first"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+    }
     
 }
 
@@ -103,7 +128,7 @@
 
 - (void)createAudioPlayer {
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                         pathForResource:@"test"
+                                         pathForResource:@"reward"
                                          ofType:@"mp3"]];
     
     NSError *error;
