@@ -94,11 +94,13 @@ NSString * const SRServerStatus = @"status";
     NSInteger status = [[result objectForKey:SRServerStatus] integerValue];
     NSInteger getFeedback = [[result objectForKey:SRServerGetFeedback] integerValue];
     
+    /*
     if(getFeedback == 1)
         return 1;
+    */
     
     if(status == 0)
-        return 0;
+        return 1;
     
     return -1;
 }
@@ -116,11 +118,13 @@ NSString * const SRServerStatus = @"status";
     NSInteger status = [[result objectForKey:SRServerStatus] integerValue];
     NSInteger getFeedback = [[result objectForKey:SRServerGetFeedback] integerValue];
     
+    /*
     if(getFeedback == 1)
         return 1;
+    */
     
     if(status == 0)
-        return 0;
+        return 1;
     
     return -1;
 }

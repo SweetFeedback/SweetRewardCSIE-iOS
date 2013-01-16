@@ -33,7 +33,6 @@
     NSURL *url = [NSURL URLWithString:urlString];
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
     [self createAudioPlayer];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,12 +62,11 @@
         
         if(result == 1) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:@"Thank You!"
+                                                            message:@"Thank You! Go get some candies!"
                                                            delegate:self
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles: nil];
             [alert show];
-            
             [self playAudio];
         } else if(result == 0) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
@@ -77,9 +75,10 @@
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles: nil];
             [alert show];
+            [self playAudio];
         } else {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:@"Submit failed"
+                                                            message:@"Please follow the rule!"
                                                            delegate:self
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles: nil];
